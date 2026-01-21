@@ -89,6 +89,7 @@ export class ScreeningRequestFormComponent extends FormBase implements OnInit, O
         email: ['', [Validators.required, Validators.email, this.notEqualFieldValidator('candidate.email')]],
       }),
       photoIdConfirmation: [false, Validators.requiredTrue],
+      authorizationConfirmation: [false, Validators.requiredTrue],
     });
 
     this.setOtherReasonValidator();

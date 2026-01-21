@@ -148,7 +148,14 @@
       <app-field [showChevrons]="false"
         [valid]="form.get('photoIdConfirmation').valid || !form.get('photoIdConfirmation').touched"
         errorMessage="Please confirm that two pieces of valid, government issued photo ID have been checked">
-        <mat-checkbox id="photoIdConfirmation" formControlName="photoIdConfirmation">By checking this box you confirm that two pieces of valid, government issued photo ID have been checked <span class="error-states">*</span></mat-checkbox>
+        <mat-checkbox id="photoIdConfirmation" formControlName="photoIdConfirmation">By checking this box, you confirm that two pieces of valid, government-issued identification have been verified, at least one of which includes a photo (virtual verification is acceptable) <span class="error-states">*</span></mat-checkbox>
+      </app-field>
+    </div>
+    <div>
+      <app-field [showChevrons]="false"
+        [valid]="form.get('authorizationConfirmation').valid || !form.get('authorizationConfirmation').touched"
+        errorMessage="Please confirm that the requested criminal record check is authorized in accordance with your letter of agreement with the PSSO">
+        <mat-checkbox id="authorizationConfirmation" formControlName="authorizationConfirmation">By checking this box, you confirm that the requested criminal record check is authorized in accordance with your letter of agreement with the PSSO <span class="error-states">*</span></mat-checkbox>
       </app-field>
     </div>
   </section>
